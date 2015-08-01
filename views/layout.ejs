@@ -28,6 +28,7 @@
   </nav>
 
 <section class="main" id="s1">
+    <% if (typeof errors!=='undefined') { %>
     <% if (errors.length) { %>
       <span id='ErrorMsgs'>
         Corregir errores:<br/>
@@ -35,6 +36,7 @@
            <span> <%= errors[i].message %> </span><br/>
         <% } %>
       </span>
+    <% } %>
     <% } %>
     <div><%- body %></div>
   </section>

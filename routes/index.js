@@ -14,7 +14,10 @@ router.param('quizId', quizController.load);  // autoload :quizId
 //Definición de rutas de /quizes
 router.get('/quizes',   quizController.index);
 router.get('/quizes/:quizId(\\d+)', 		quizController.show);
-router.get('/quizes/:quizId(\\d+)/answer',   quizController.answer);
+router.get('/quizes/:quizId(\\d+)/answer',         quizController.answer);
+
+router.get('/quizes/:quizId(\\d+)/edit',             quizController.edit);
+router.put('/quizes/:quizId(\\d+)',                   quizController.update);
 
 router.get('/quizes/author', function(req, res) {	res.render('author');});
 router.get('/quizes/dedicatoria', function(req, res) {	res.render('dedicatoria');});
