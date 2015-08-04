@@ -1,4 +1,4 @@
-var models = require('../models/models.js');
+﻿var models = require('../models/models.js');
 
 // GET /quizes/:quizId/comments/new
 exports.new = function(req, res) {
@@ -22,7 +22,7 @@ exports.create = function(req, res) {
         comment // save: guarda en DB campo texto de comment
         .save()
         .then( function(){ res.redirect('/quizes/'+req.params.quizId)}) 
-      }      // res.redirect: Redirecci�n HTTP a lista de preguntas
+      }      // res.redirect: Redirección HTTP a lista de preguntas
     }
   ).catch(function(error){next(error)});
   
